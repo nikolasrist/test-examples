@@ -1,0 +1,9 @@
+node_modules
+dist
+coverage
+.idea
+.vscode
+scratch.sql
+.env
+performance*.json
+.DS_STORE

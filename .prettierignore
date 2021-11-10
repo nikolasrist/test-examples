@@ -1,0 +1,12 @@
+# The following lines define the file types the Prettier CLI and plugins should format for this package
+*.*
+!*.js
+!*.json
+!*.md
+!*.ts
+!*.yml
+!/.vscode
+
+# Actual ignores
+package-lock.json
+/dist/

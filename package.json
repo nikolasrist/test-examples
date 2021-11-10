@@ -1,0 +1,36 @@
+{
+  "name": "integrationtests-example",
+  "version": "1.0.0",
+  "description": "Small example project for integration testing",
+  "main": "index.ts",
+  "scripts": {
+    "test:integration": "jest integration"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikolasrist/integrationtests-example.git"
+  },
+  "author": "Nikolas Rist",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nikolasrist/integrationtests-example/issues"
+  },
+  "homepage": "https://github.com/nikolasrist/integrationtests-example#readme",
+  "dependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/pg": "^8.6.1",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "import-sort-style-module-compact": "^2.0.0",
+    "jest": "^27.3.1",
+    "knex": "^0.95.14",
+    "pg": "^8.7.1",
+    "prettier": "^2.4.1",
+    "testcontainers": "^7.22.0",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.4.0",
+    "tsc-watch": "^4.5.0",
+    "typescript": "^4.4.4"
+  }
+}
