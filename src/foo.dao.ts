@@ -1,10 +1,10 @@
 import { Knex } from 'knex';
 import { Foo } from './foo.models';
 
-export type DAO = typeof dao;
+export type DAO = typeof fooDAO;
 
-export const dao = {
-  insert: async (pg: Knex, item: Foo): Promise<Foo> => {
+export const fooDAO = {
+  insert: async (pg: Knex, item: FooUpdate): Promise<Foo> => {
     const items = await pg<Foo>('foo').insert(item).returning('*');
     return items[0];
   }
