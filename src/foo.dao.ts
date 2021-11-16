@@ -1,5 +1,5 @@
 import { Knex } from 'knex';
-import { Foo } from './foo.models';
+import { Foo, FooUpdate } from './foo.models';
 
 export type DAO = typeof fooDAO;
 
