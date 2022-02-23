@@ -33,7 +33,7 @@ describe('Integration test', () => {
 
     // Log version to check database is working
     const version = await pg.raw('select version()');
-    console.log('VERSION: ', version);
+    console.log('VERSION: ', version.rows[0].version);
 
     // Run the Knex migration to have proper database schema in place
     await pg.migrate.latest();
@@ -46,17 +46,13 @@ describe('Integration test', () => {
   describe('Test Foo handler', () => {
     it('Creates a list of foos', async () => {
       const elements = ['Foo1', 'Foo2', 'Foo3', 'FooBar'];
-      await main(pg, elements);
+      const creationResult = await main(pg, elements);
 
-      const foos = await pg.table('foo').select().orderBy('name');
+      const foos = await pg.table('foo').select();
 
       console.log(foos);
 
-      expect(foos.length).toEqual(4);
-      expect(foos[0].name).toEqual(elements[0]);
-      expect(foos[1].name).toEqual(elements[1]);
-      expect(foos[2].name).toEqual(elements[2]);
-      expect(foos[3].name).toEqual(elements[3]);
+      expect(foos).toMatchObject(creationResult);
     });
   });
 });
