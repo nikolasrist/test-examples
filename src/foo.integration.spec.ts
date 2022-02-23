@@ -24,7 +24,7 @@ describe('Integration test', () => {
         ssl: false
       },
       pool: { min: 3, max: 10 },
-      migrations: { directory: path.join(__dirname, '../database/migrations') },
+      migrations: { directory: path.join(__dirname, './database/migrations') },
       debug: false
     });
 
@@ -46,9 +46,9 @@ describe('Integration test', () => {
   describe('Test Foo handler', () => {
     it('Creates a list of foos', async () => {
       const elements = ['Foo1', 'Foo2', 'Foo3', 'FooBar'];
-      await main(elements);
+      await main(pg, elements);
 
-      const foos = await pg.table('foo').select();
+      const foos = await pg.table('foo').select().orderBy('name');
 
       console.log(foos);
 
