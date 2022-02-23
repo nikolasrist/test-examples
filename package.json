@@ -5,6 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "test:integration": "jest integration"
+    "test:unit": "jest unit"
   },
   "repository": {
     "type": "git",
