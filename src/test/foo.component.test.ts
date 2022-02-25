@@ -1,7 +1,7 @@
 import knex, { Knex } from 'knex';
 import path from 'path';
 import { PostgreSqlContainer, StartedPostgreSqlContainer } from 'testcontainers';
-import { main } from './foo-main';
+import { main } from '../foo-main';
 
 describe('Integration test', () => {
   jest.setTimeout(180_000); // Timeout is needed otherwise test fails with missing database connection
