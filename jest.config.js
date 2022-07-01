@@ -3,7 +3,7 @@ module.exports = {
   moduleFileExtensions: ['ts', 'js'],
   rootDir: '.',
   preset: 'ts-jest',
-  testRegex: '\\.spec\\.ts$',
+  testRegex: '\\.test\\.ts$',
   testEnvironment: 'node',
   coverageReporters: ['text', 'html', 'lcov'],
   coverageDirectory: '<rootDir>/coverage',
