@@ -4,6 +4,7 @@
   "description": "Small example project for integration testing",
   "main": "index.ts",
   "scripts": {
+    "test:component": "jest component",
     "test:integration": "jest integration",
     "test:unit": "jest unit",
     "test:all": "jest"
