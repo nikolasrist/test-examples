@@ -26,6 +26,7 @@ describe('FooMapper', () => {
         name: 'FooName',
         age: undefined
       });
+      // expected failing test, due to missing property `age` on the object
       expect(result).toStrictEqual({
         id: 'foo2Id',
         name: 'FooName',
