@@ -1,7 +1,7 @@
 import { main } from '../foo-main';
 import { ContainerInstance, startContainer, stopContainer, TEST_TIMEOUTS } from './test-setup';
 
-describe('Integration test', () => {
+describe('Component test', () => {
   jest.setTimeout(TEST_TIMEOUTS); // Timeout is needed otherwise test fails with missing database connection
   let containerInstance: ContainerInstance;
 
