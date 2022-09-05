@@ -6,3 +6,9 @@ export interface Foo {
 export interface FooUpdate {
   name: string;
 }
+
+export interface Foo2 {
+  id: string;
+  name: string;
+  age?: number | undefined;
+}
